@@ -9,7 +9,7 @@ namespace Homework_Lesson_2
 			//byte first = 255;
 			//short second = 32000;
 			//int third = 999999;
-			//long fourth = 9999999;
+			//long fourth = 9999999; 
 			//bool fivth = true;
 			//float number_1 = 213.0F; 
 			//char symbol = 'I';
