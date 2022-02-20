@@ -11,7 +11,7 @@ namespace Homework_Lesson_2
 			//int third = 999999;
 			//long fourth = 9999999;
 			//bool fivth = true;
-			//float number_1 = 213.0F;
+			//float number_1 = 213.0F; 
 			//char symbol = 'I';
 			//double number_2 = 23423.14D;
 			//decimal big = third + fourth;
