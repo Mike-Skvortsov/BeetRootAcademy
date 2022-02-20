@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{3E3E2F67-8F59-4941-BDB1-264F6BB4BE49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework-Lesson-2", "Homework-Lesson-2\Homework-Lesson-2.csproj", "{8DCC0C2A-0F48-4C96-87EE-5FE0D4C20F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework-Lesson-2", "Homework-Lesson-2\Homework-Lesson-2.csproj", "{8DCC0C2A-0F48-4C96-87EE-5FE0D4C20F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork-Lesson-3-condition-loops", "Classwork-Lesson-3-condition-loops\Classwork-Lesson-3-condition-loops.csproj", "{088CD941-CBCB-47C0-9065-2AC4A3CB8A77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8DCC0C2A-0F48-4C96-87EE-5FE0D4C20F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DCC0C2A-0F48-4C96-87EE-5FE0D4C20F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DCC0C2A-0F48-4C96-87EE-5FE0D4C20F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088CD941-CBCB-47C0-9065-2AC4A3CB8A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088CD941-CBCB-47C0-9065-2AC4A3CB8A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088CD941-CBCB-47C0-9065-2AC4A3CB8A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088CD941-CBCB-47C0-9065-2AC4A3CB8A77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
