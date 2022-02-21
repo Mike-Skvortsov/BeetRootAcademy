@@ -17,11 +17,7 @@ namespace Homework_Lesson_6_arrays
 			}
 			Console.Write("\n_________________________\n");
 			int[] array2 = new int[N] { 204, 445, 84, 1111 };
-			SortInsertion(array2, N);
-			foreach (var item in array2)
-			{
-				Console.Write(item + "\t");
-			}
+			 
 			Console.Write("\n_________________________\n");
 			int[] array3 = new int[8] { 27, 3, 5, 4, 9, 11, 52, 77 };
 			SortSelection(array3, N);

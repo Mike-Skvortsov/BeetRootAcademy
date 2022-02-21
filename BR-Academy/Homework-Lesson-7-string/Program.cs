@@ -1,0 +1,111 @@
+﻿using System;
+
+namespace Homework_Lesson_7_string
+{
+	class Program
+	{
+		static void Main()
+		{
+			string s1 = Console.ReadLine();
+			string s2 = Console.ReadLine();
+			char[] Dupl = { };
+			Console.WriteLine(Compare(s1, s2));
+
+			Analyze(s1);
+			Duplicate(s1);
+		Console.WriteLine(Sort(s1));
+		}
+
+		static bool Compare(string str1, string str2)
+		{
+			if (str1.Length != str2.Length)
+			{
+				return false;
+			}
+			for (int i = 0; i <= str1.Length - 1; i++)
+			{
+				if (str1[i] != str2[i])
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+
+		static void Analyze(string s1)
+		{
+			int countLetter = 0;
+			int countSymbol = 0;
+			int countDigit = 0;
+			for (int i = 0; i < s1.Length-1; i++)
+			{
+				if (char.IsLetter(s1[i]))
+				{
+					countLetter++;
+				}
+				if(char.IsDigit(s1[i]))
+				{
+					countDigit++;
+				}	
+				if(s1[i] == '!' || s1[i] == '@' || s1[i] == '#' || s1[i] == '$' || s1[i] == '%'
+				|| s1[i] == '^' || s1[i] == '^' || s1[i] == '&' || s1[i] == '*' || s1[i] == '(' 
+				|| s1[i] == ')' || s1[i] == '_' || s1[i] == '-' || s1[i] == '?' || s1[i] == '/')
+				{
+					countSymbol++;
+				}
+			}
+			Console.WriteLine("Лiтер : " + countLetter);
+			Console.WriteLine("Цифр : " + countDigit);
+			Console.WriteLine("Спец. cимволiв : " + countSymbol);
+		}
+
+		static string Sort(string str)
+		{
+			char[] charArray = str.ToLower().ToCharArray();
+			string sortArray = "";
+			for (int i = 0; i < charArray.Length; i++)
+			{
+				for (int j = 0; j < charArray.Length; j++)
+				{
+					if (charArray[j] > charArray[j + 1])
+					{
+						char temp = charArray[j];
+						charArray[j] = charArray[j + 1];
+						charArray[j + 1] = temp;
+					}
+				}
+			}
+			for (int i = 0; i < charArray.Length-1; i++)
+			{
+				sortArray += charArray[i];
+			}
+			return sortArray;
+		}
+
+		static char[] Duplicate(string str)
+		{
+			char[] Duplicate = str.ToLower().ToCharArray();
+			string Dupl = "";
+			for (int i = 0; i < str.Length; i++)
+			{
+				int count = 0;
+				for (int j = 0; j < str.Length; j++)
+				{
+					if (str[i] == str[j])
+					{
+						count++;
+						if (count >= 2)
+						{
+							if (!Char.IsWhiteSpace(Duplicate[j]) && !Dupl.Contains(Duplicate[i]))
+							{
+								Dupl += Duplicate[j].ToString();
+							}
+						}
+					}
+				}
+			}
+			char[] arrDupl = Dupl.ToCharArray();
+			return arrDupl;
+		}
+	}
+}
