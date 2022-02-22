@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Homework_Lesson_7_string
 {
@@ -8,12 +9,12 @@ namespace Homework_Lesson_7_string
 		{
 			string s1 = Console.ReadLine();
 			string s2 = Console.ReadLine();
-			char[] Dupl = { };
 			Console.WriteLine(Compare(s1, s2));
 
 			Analyze(s1);
 			Duplicate(s1);
-		Console.WriteLine(Sort(s1));
+			Console.WriteLine(Sort(s1));
+			Console.WriteLine(SoloWork(s1));
 		}
 
 		static bool Compare(string str1, string str2)
@@ -37,18 +38,18 @@ namespace Homework_Lesson_7_string
 			int countLetter = 0;
 			int countSymbol = 0;
 			int countDigit = 0;
-			for (int i = 0; i < s1.Length-1; i++)
+			for (int i = 0; i < s1.Length; i++)
 			{
 				if (char.IsLetter(s1[i]))
 				{
 					countLetter++;
 				}
-				if(char.IsDigit(s1[i]))
+				if (char.IsDigit(s1[i]))
 				{
 					countDigit++;
-				}	
-				if(s1[i] == '!' || s1[i] == '@' || s1[i] == '#' || s1[i] == '$' || s1[i] == '%'
-				|| s1[i] == '^' || s1[i] == '^' || s1[i] == '&' || s1[i] == '*' || s1[i] == '(' 
+				}
+				if (s1[i] == '!' || s1[i] == '@' || s1[i] == '#' || s1[i] == '$' || s1[i] == '%'
+				|| s1[i] == '^' || s1[i] == '^' || s1[i] == '&' || s1[i] == '*' || s1[i] == '('
 				|| s1[i] == ')' || s1[i] == '_' || s1[i] == '-' || s1[i] == '?' || s1[i] == '/')
 				{
 					countSymbol++;
@@ -65,7 +66,7 @@ namespace Homework_Lesson_7_string
 			string sortArray = "";
 			for (int i = 0; i < charArray.Length; i++)
 			{
-				for (int j = 0; j < charArray.Length; j++)
+				for (int j = 0; j < charArray.Length-1; j++)
 				{
 					if (charArray[j] > charArray[j + 1])
 					{
@@ -75,7 +76,7 @@ namespace Homework_Lesson_7_string
 					}
 				}
 			}
-			for (int i = 0; i < charArray.Length-1; i++)
+			for (int i = 0; i < charArray.Length - 1; i++)
 			{
 				sortArray += charArray[i];
 			}
@@ -106,6 +107,27 @@ namespace Homework_Lesson_7_string
 			}
 			char[] arrDupl = Dupl.ToCharArray();
 			return arrDupl;
+		}
+
+		static string SoloWork(string s1)
+		{
+			string newStr = "";
+			for (int i = 0; i < s1.Length; i++)
+			{
+				if (s1[i] == s1.ToUpper()[i])
+				{
+					newStr += s1.ToLower()[i];
+				}
+				else if (s1[i] == s1.ToLower()[i])
+				{
+					newStr += s1.ToUpper()[i];
+				}
+				else
+				{
+					continue;
+				}
+			}
+			return newStr;
 		}
 	}
 }
